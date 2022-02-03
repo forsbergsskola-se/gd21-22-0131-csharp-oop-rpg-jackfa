@@ -7,42 +7,32 @@ namespace Methods
     {
         static void Main()
         {
-            Count(1, 3);
-            Count(99, 101);
-            Count(11, 8);
-            Count(2, -1);
-            Count(1338, 1337);
+        
+            Count(0, 3);
+            Count(100, 101);
+            Count(10, 8);
+            Count(1, -1);
+            Count(1337, 1337);
 
         }
 
         static void Count(int from, int to)
         {
-            int countUp = to - from - 1;
-            int countDown = -1;
-            int fromTextUp = from + 1;
-            int fromTextDown = from - 1;
-            int toLoopUp = from + 2;
-
+            Console.WriteLine("Counting from " + from + " to " + to);
             if (from < to)
             {
-                Console.WriteLine("Counting from " + fromTextUp + " to " + to);
-
-                for (int i = from; i < toLoopUp; i++)
+                for (int i = from; i <= to; i++)
                 {
-                    from += countUp;
-                    Console.WriteLine(from);
+                    Console.WriteLine(i);
                 }
             }
             else
             {
-                Console.WriteLine("Counting from " + fromTextDown + " to " + to);
-
-                for (int i = from; i > to; i--)
+                for (int i = from; i >= to; i--)
                 {
-                    from += countDown;
-                    Console.WriteLine(from);
+                    Console.WriteLine(i);
                 }
-            }
+            } 
         }
     }
 }
