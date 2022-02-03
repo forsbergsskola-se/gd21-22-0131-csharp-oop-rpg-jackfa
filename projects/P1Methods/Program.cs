@@ -7,17 +7,11 @@ namespace Methods
     {
         static void Main()
         {
-            int loopCount = 2;
-
             Count(1, 3);
             Count(99, 101);
             Count(11, 8);
             Count(2, -1);
             Count(1338, 1337);
-            for (int i = 0; i < 3; i++)
-            {
-
-            }
 
         }
 
@@ -48,7 +42,6 @@ namespace Methods
                     from += countDown;
                     Console.WriteLine(from);
                 }
-
             }
         }
     }
